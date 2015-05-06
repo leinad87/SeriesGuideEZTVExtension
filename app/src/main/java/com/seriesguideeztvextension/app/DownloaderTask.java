@@ -30,7 +30,7 @@ public class DownloaderTask extends AsyncTask<String, List<String[]>, List<Strin
         List<String[]> data = new ArrayList<String[]>();
 
         try {
-            Document doc  = Jsoup.connect("https://eztv.it/search/").data("SearchString1","arrow s03e21").post();
+            Document doc = Jsoup.connect("https://eztv.it/search/").data("SearchString1", query).post();
 
             Elements rows = doc.select("tr.forum_header_border");
 

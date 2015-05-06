@@ -25,6 +25,11 @@ public class ActivityDownloader extends ActionBarActivity {
         setContentView(R.layout.list);
 
         DownloaderTask task = new DownloaderTask(this, (ListView) findViewById(R.id.listview));
-        task.execute(getIntent().getExtras().getString("query"));
+
+        String query = "";
+        if (getIntent().hasExtra("query"))
+            query = getIntent().getExtras().getString("query");
+
+        task.execute(query);
     }
 }
