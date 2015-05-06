@@ -58,7 +58,7 @@ public class TorrentsAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(mDataset.get(ii)[1]));
                 mContext.startActivity(intent);
-                Toast.makeText(mContext, "Enviando " + mDataset.get(ii)[1], Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext, mDataset.get(ii)[1], Toast.LENGTH_LONG).show();
             }
         });
         return v;
