@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.seriesguideeztvextension.app">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+     <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".EztvExtension"
+            android:description="@string/app_name"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.battlelancer.seriesguide.api.SeriesGuideExtension" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ActivityDownloader"
+            android:label="eztv" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>
